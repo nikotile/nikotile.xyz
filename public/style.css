@@ -12,35 +12,26 @@ main {
   padding-bottom: 10px;
 }
 
-main a {
-  color: #006eff;
+a {
+  color: #d8d88a;
 }
 
-main a:hover {
-  background-color: #006eff;
-  /*color: #0c0c0c;*/
+a:hover {
+  color: #d88abd;
 }
 
-nav {
-  padding-top: 5px;
-  padding-bottom: 12px;
-}
-
-nav a {
-  color: #e0e0e0;
-  margin-top: 5px;
-  text-shadow: none;
-}
-
-nav a:hover { background-color: #e0e0e0; }
-
-nav .s {
-  background-color: #0c0c0c;
-  opacity: 1;
-}
-
-header {
-  color: #afafaf;
-  padding-top: 10px;
+.box {
+  border:5px;
+  border-color: white;
+  margin: 42px auto;
+  width: 550px;
   text-align: center;
+}
+
+.content {
+  width: 550px;
+  margin: 42px auto;
+  border:5px;
+  border-color: white;
+  padding: 0 20px 0 20px;
 }
