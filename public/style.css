@@ -1,0 +1,46 @@
+body {
+  line-height: 1.4;
+  font-size: 11pt;
+  background-color: #0c0c0c;
+  color: #e0e0e0;
+  font-family: "Lucida Console", Monaco, monospace;
+  margin: 1em auto;
+  max-width: 1000px;
+}
+
+main {
+  padding-bottom: 10px;
+}
+
+main a {
+  color: #006eff;
+}
+
+main a:hover {
+  background-color: #006eff;
+  /*color: #0c0c0c;*/
+}
+
+nav {
+  padding-top: 5px;
+  padding-bottom: 12px;
+}
+
+nav a {
+  color: #e0e0e0;
+  margin-top: 5px;
+  text-shadow: none;
+}
+
+nav a:hover { background-color: #e0e0e0; }
+
+nav .s {
+  background-color: #0c0c0c;
+  opacity: 1;
+}
+
+header {
+  color: #afafaf;
+  padding-top: 10px;
+  text-align: center;
+}
