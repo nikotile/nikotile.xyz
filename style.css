@@ -1,0 +1,39 @@
+body {
+  line-height: 1.4;
+  font-size: 11pt;
+  background-color: #0c0c0c;
+  color: #e0e0e0;
+  font-family: "Lucida Console", Monaco, monospace;
+  margin: 1em auto;
+  max-width: 1000px;
+}
+
+main {
+  padding-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #d8d88a;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #d88abd;
+}
+
+.box {
+  border:5px;
+  border-color: white;
+  margin: 42px auto;
+  width: 550px;
+  text-align: center;
+}
+
+.content {
+  width: 550px;
+  margin: 42px auto;
+  border:5px;
+  border-color: white;
+  padding: 0 20px 0 20px;
+}
