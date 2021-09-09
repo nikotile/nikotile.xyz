@@ -6,13 +6,49 @@
 <description>The RSS feed of Nikotile's blog..</description>
 <language>en-us</language>
 <link>http://nikotile.xyz/rss.xml</link>
-<atom:link href="http://yourwebsite.com/rss.xml" rel="self" type="application/rss+xml" />
+<atom:link href="http://nikotile.xyz/rss.xml" rel="self" type="application/rss+xml" />
 <image>
 <title>Nikotile</title>
-<url>https://nikotile.xyz/picture/favicon.png</url>
+<url>https://nikotile.xyz/pictures/favicon.png</url>
 <link>https://nikotile.xyz/rss.xml</link>
 </image>
 <!-- LB -->
+
+
+
+
+
+
+
+
+
+<item>
+<title>First 'Blog' Entry</title>
+<guid>https://nikotile.xyz/2021.html#first-blog-entry</guid>
+<pubDate>Sat, 04 Sep 2021 12:55:59 +0700</pubDate>
+<description><![CDATA[
+<p>This is my first blog entry, well 'blog'.
+  My website used to be, for a short period, a Node.js-powered
+  thingy. I was, and still am, learning some computer stuff and
+  that's why I pretentiously tried to learn Node. But at the end
+  of the day, I just want a simple website and now I'm using
+  <a href="https://github.com/LukeSmithxyz/lb">Luke Smith's lb</a>.
+</p>
+<p>Pretty cool? At least I think it is. This 'blog' also has an
+  <a href="https://nikotile.xyz/rss.xml">RSS feed</a>. You can subscribe to it.
+  That's it for now!
+</p>
+]]></description>
+</item>
+
+
+
+
+
+
+
+
+
 
 
 

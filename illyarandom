@@ -1,0 +1,4 @@
+#!/bin/bash
+acak=$(shuf -i 0-100 -n 1)
+echo $acak
+cp /var/www/nikotile.xyz/illya/$acak.jpg /var/www/nikotile.xyz/illya/x.jpg

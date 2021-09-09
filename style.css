@@ -4,13 +4,22 @@ body {
   background-color: #0c0c0c;
   color: #e0e0e0;
   font-family: "Lucida Console", Monaco, monospace;
-  margin: 1em auto;
-  width: 550px;
-  padding-top: 10px;
+  margin: auto;
+  padding: 10px;
+}
+
+@media (min-width: 450px) {
+  body {
+    margin: 0 25% 0 25%;
+  }
 }
 
 main {
   padding-bottom: 10px;
+}
+
+p {
+  text-align: justify;
 }
 
 a {
