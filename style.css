@@ -18,8 +18,7 @@ main {
   padding-bottom: 10px;
 }
 
-p {
-  text-align: justify;
+p {;
 }
 
 a {
@@ -39,4 +38,8 @@ a:hover {
 .content {
   margin: 42px auto;
   padding: 0 20px 0 20px;
+}
+
+div.entry {
+    padding-bottom: 60px;
 }
