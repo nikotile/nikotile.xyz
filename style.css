@@ -56,6 +56,12 @@ a:hover {
   padding: 0 20px 0 20px;
 }
 
+.blog {
+  margin: 42px auto;
+  padding: 0 20px 0 20px;
+  text-align: left;
+}
+
 div.entry {
     padding-bottom: 60px;
 }
