@@ -8,7 +8,7 @@
     <meta property="og:url" content="<%= getUrl().url %>"/>
     <meta property="og:site_name" content="<%= meta.title %>"/>
     <% // check if entry or not %>
-    <% if(getUrl().path.slice(0,6) === '/blog/') { %>
+    <% if(getUrl().path.slice(0,6) === '/blog/' && getUrl().path.length > 6) { %>
     <meta name="author" content="<%= meta.title %>">
     <meta property="og:title" content="<%= entries.title %>"/>
     <meta property="og:type" content="article"/>
