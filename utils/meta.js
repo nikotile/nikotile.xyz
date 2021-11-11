@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const meta = {
-  port: 5000,
+  port: 6000,
   title: 'Nikotile',
   author: 'Nikotile',
   url: 'nikotile.xyz',
