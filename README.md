@@ -1,12 +1,7 @@
 # nikotile.xyz
-## Niko's Website
+## Niko's Homepage
 
-Intended for personal learning purposes. It is now just a simple, static html page
-instead of nonsensical Node.js stuff (I can't code).
+Intended for personal learning purposes (and to shill the Nikotile "brand"). 
 
-Blog is powered by Luke Smith's [lb](https://github.com/LukeSmithxyz/lb).
-
-Don't mind the Illya pictures. I'm using them for my Discord server daily reminder. The 'illyarandom'
-script is used to randomize a file, well "randomize". There are some simple scripts I didn't put therethat send an HTTP request to Discord (or something like that, I guess).
-
-![Illya](/pictures/discord-reminder.png)
+## Blog Content
+My writings are licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).

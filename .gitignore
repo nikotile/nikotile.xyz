@@ -1,4 +1,3 @@
-illya/
-pictures/
-dump/
-robots.txt
+node_modules/
+static/illya/
+old/

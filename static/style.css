@@ -1,0 +1,26 @@
+body {
+  background: linear-gradient(180deg, #ede9d1 0%, #dddddd 40%) no-repeat fixed;
+}
+
+.card {
+  background: var(--bg);
+}
+
+.list-group-item {
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+}
+
+div > img {
+  max-width:500px;
+  max-height:350px;
+}
+
+a {
+  text-decoration: none;
+  color: #9e53a7;
+}
+
+a:hover {
+  text-decoration: none;
+  background-color: #f3f3f3;
+}

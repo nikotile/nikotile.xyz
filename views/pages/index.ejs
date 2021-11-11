@@ -1,0 +1,49 @@
+<script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
+
+<div class="text-center p-3">
+  <h1 class="fw-bolder">Nikotile</h1>
+</div>
+
+<div class="text-center p-3">
+  <% const number = Math.floor((Math.random() * 100) + 1); %>
+  <img src="/illya/<%= number %>.jpg"></img>
+</div>
+
+<div class="text-center p-3">
+  <p>Hello, Nikotile here! I like literature, media, culture, and some Lacanian psychoanalysis. You may find me rambling about those stuff there and there.</p>
+</div>
+
+<div class="p-3">
+  <div class="">
+    <p>Something (or Some Things):</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <% for (let i = 0; i < sns.length; i++) { %>
+    <li class="list-group-item d-flex align-items-start justify-content-between">
+      <div>
+        <a href="<%= sns[i].link %>"><%= sns[i].title %></a> 
+      </div>
+    </li>
+    <% } %>
+  </ul>
+</div>
+
+<div class="p-3">
+  <div>
+    <p>Recent updates:</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <% for (let i = 0; i < 4; i++) { %>
+    <li class="list-group-item d-flex align-items-start justify-content-between">
+      <div class="ms-2 me-auto">
+        <small class="text-muted" id="timestamp<%= i %>"></small>
+        <a href="/blog/<%= encodeURI(entries[i].title.replace(/\s/g,'-').replace(/[&\/\\#,+()$~%.'":*!?<>{}]/g,'').toLowerCase()) %>"><%= entries[i].title %></a> 
+      </div>
+    </li>
+    <script>
+      let timestamp<%= i %> = luxon.DateTime.fromISO("<%= entries[i].date %>").setLocale('<%= meta.locale %>').toFormat('dd LLL y');
+      document.getElementById("timestamp<%= i %>").innerHTML = timestamp<%= i %> + " —";
+    </script>
+    <% } %>
+  </ul>
+</div>
