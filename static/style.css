@@ -1,5 +1,6 @@
 body {
-  background: linear-gradient(180deg, #ede9d1 0%, #dddddd 40%) no-repeat fixed;
+  /* background: linear-gradient(180deg, #ede9d1 0%, #dddddd 40%) no-repeat fixed; */
+  background: linear-gradient(180deg, #d1dfa9 0%, #dddddd 40%) no-repeat fixed;
 }
 
 .card {
