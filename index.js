@@ -1,19 +1,26 @@
-const fs = require('fs');
-const { meta, loadSNS } = require('./utils/meta');
-const { getDate, loadEntries, writeEntry, cleanIcons } = require('./utils/entries');
 const express = require('express')
   , app = express()
   , expressLayouts = require('express-ejs-layouts')
-  , bodyParser = require('body-parser');
+  , bodyParser = require('body-parser')
+  , compression = require('compression');
 
-// view engine and static file-serving
+// thanks Tom
+app.disable('x-powered-by');
+
+// view engine
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
+
+// static file-serving
 app.use(express.static('static'));
+
 // for blog submission
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// get url for metadata
+// compression
+app.use(compression());
+
+// for metadata etc.
 app.use(require(__dirname+'/utils/getUrl'));
 
 app.use('/', require(__dirname+'/controllers')); // routes
