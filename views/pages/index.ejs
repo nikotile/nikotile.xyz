@@ -41,7 +41,7 @@
       </div>
     </li>
     <script>
-      let timestamp<%= i %> = luxon.DateTime.fromISO("<%= entries[i].date %>").setLocale('<%= meta.locale %>').toFormat('dd LLL y');
+      let timestamp<%= i %> = luxon.DateTime.fromISO("<%= entries[i].date %>").setLocale('<%= locals.meta.locale %>').toFormat('dd LLL y');
       document.getElementById("timestamp<%= i %>").innerHTML = timestamp<%= i %> + " —";
     </script>
     <% } %>

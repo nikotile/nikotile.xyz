@@ -6,7 +6,6 @@ module.exports = async (req, res) => {
   const entry = loadEntry(title);
   res.render('pages/entry', {
     layout: 'layouts/main',
-    entry,
-    meta
+    entry
   });
 };

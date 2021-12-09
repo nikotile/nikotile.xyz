@@ -5,7 +5,6 @@ module.exports = async (req, res) => {
   res.setHeader('content-type', 'text/xml')
     .render('pages/rss', {
       layout: 'layouts/xml',
-      entries: loadEntries(),
-      meta
+      entries: loadEntries()
     });
 };

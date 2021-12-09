@@ -5,7 +5,6 @@ module.exports = async (req, res) => {
   res.render('pages/index', {
     layout: 'layouts/main',
     entries: loadEntries(),
-    sns: loadSNS(),
-    meta
+    sns: loadSNS()
   });
 };

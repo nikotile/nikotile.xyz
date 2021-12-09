@@ -1,3 +1,4 @@
+const { meta } = require('./utils/meta');
 const express = require('express')
   , app = express()
   , expressLayouts = require('express-ejs-layouts')
@@ -22,6 +23,7 @@ app.use(compression());
 
 // for metadata etc.
 app.use(require(__dirname+'/utils/getUrl'));
+app.locals.meta = meta;
 
 app.use('/', require(__dirname+'/controllers')); // routes
 app.use('/', require(__dirname+'/controllers/gets/404')) // 404 catchall

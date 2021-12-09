@@ -6,12 +6,12 @@
     <%- entry.description %>
   </div>
   <div class="mx-3">
-    <small><%= meta.author %> <a href="mailto:<%= meta.email %>?subject=<%= encodeURI(entry.title) %>" class="fw-bold text-muted">(reply-to)</a></small>
+    <small><%= locals.meta.author %> <a href="mailto:<%= locals.meta.email %>?subject=<%= encodeURI(entry.title) %>" class="fw-bold text-muted">(reply-to)</a></small>
    </div>
   <small id="timestamp" class="mx-3 text-muted">
   </small>
   <script>
-    let timestamp = luxon.DateTime.fromISO("<%= entry.date %>").setLocale('<%= meta.locale %>').toLocaleString(luxon.DateTime.DATETIME_MED);
+    let timestamp = luxon.DateTime.fromISO("<%= entry.date %>").setLocale('<%= locals.meta.locale %>').toLocaleString(luxon.DateTime.DATETIME_MED);
     document.getElementById("timestamp").innerHTML = timestamp;
   </script>
 </div>

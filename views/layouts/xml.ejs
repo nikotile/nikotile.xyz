@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 
 <channel>
-<title><%= meta.title %></title>
-<description>Updates from<%= meta.title %>.</description>
+<title><%= locals.meta.title %></title>
+<description>Updates from<%= locals.meta.title %>.</description>
 <language>en-us</language>
 <link><%= getUrl().url %></link>
-<atom:link href="<%= meta.url %>/rss" rel="self" type="application/rss+xml" />
+<atom:link href="<%= locals.meta.url %>/rss" rel="self" type="application/rss+xml" />
 
   <%- body %>
 
