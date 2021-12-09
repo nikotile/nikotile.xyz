@@ -12,7 +12,6 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
 app.use(express.static('static'));
-app.use('/blog',express.static('static/oldBlog'));
 // body parser
 app.use(bodyParser.urlencoded({ extended: true }));
 
