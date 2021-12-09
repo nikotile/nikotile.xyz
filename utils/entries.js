@@ -27,6 +27,14 @@ const loadEntries = () => {
   return entries;
 };
 
+const loadEntry = (title) => {
+  const fileBuffer = fs.readFileSync(path.resolve(__dirname,`../data/entries.json`));
+  const entries = JSON.parse(fileBuffer).find(entry =>
+    entry.title.replace(/\s/g,'-').replace(/[&\/\\#,+()$~%.'":*!?<>{}]/g,'').toLowerCase() == title
+  );
+  return entries;
+};
+
 const writeEntry = (title, description) => {
   const dateObj = getDate();
   createIcon(title, dateObj.guid);
@@ -56,4 +64,4 @@ const cleanIcons = () => {
   };
 };
 
-module.exports = { getDate, loadEntries, writeEntry, cleanIcons };
+module.exports = { getDate, loadEntries, loadEntry, writeEntry, cleanIcons };

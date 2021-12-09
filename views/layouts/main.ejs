@@ -10,13 +10,13 @@
     <% // check if entry or not %>
     <% if(getUrl().path.slice(0,6) === '/blog/' && getUrl().path.length > 6) { %>
     <meta name="author" content="<%= meta.title %>">
-    <meta property="og:title" content="<%= entries.title %>"/>
+    <meta property="og:title" content="<%= entry.title %>"/>
     <meta property="og:type" content="article"/>
-    <meta property="og:article:published_time" content="<%= entries.date %>"/>
-    <meta property="og:description" content="<%= entries.description.slice(0,177) + '...' %>"/>
-    <meta property="og:image" content="https://<%= getUrl().hostname %>/icons/<%= entries.guid %>.png"/>
-    <meta name="twitter:image" content="https://<%= getUrl().hostname %>/icons/<%= entries.guid %>.png"/>
-    <title><%= entries.title %></title>
+    <meta property="og:article:published_time" content="<%= entry.date %>"/>
+    <meta property="og:description" content="<%= entry.description.slice(0,177) + '...' %>"/>
+    <meta property="og:image" content="https://<%= getUrl().hostname %>/icons/<%= entry.guid %>.png"/>
+    <meta name="twitter:image" content="https://<%= getUrl().hostname %>/icons/<%= entry.guid %>.png"/>
+    <title><%= entry.title %></title>
     <% } else { %>
     <meta property="og:title" content="<%= meta.title %>"/>
     <meta property="og:type" content="website"/>

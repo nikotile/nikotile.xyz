@@ -1,17 +1,17 @@
 <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
 
 <div class="card m-3 p-5">
-  <h1 class="fw-bolder text-center"><%= entries.title %></h1>
+  <h1 class="fw-bolder text-center"><%= entry.title %></h1>
   <div style="text-align:justify;" class="m-3 img-nobootstrap">
-    <%- entries.description %>
+    <%- entry.description %>
   </div>
   <div class="mx-3">
-    <small><%= meta.author %> <a href="mailto:<%= meta.email %>?subject=<%= encodeURI(entries.title) %>" class="fw-bold text-muted">(reply-to)</a></small>
+    <small><%= meta.author %> <a href="mailto:<%= meta.email %>?subject=<%= encodeURI(entry.title) %>" class="fw-bold text-muted">(reply-to)</a></small>
    </div>
   <small id="timestamp" class="mx-3 text-muted">
   </small>
   <script>
-    let timestamp = luxon.DateTime.fromISO("<%= entries.date %>").setLocale('<%= meta.locale %>').toLocaleString(luxon.DateTime.DATETIME_MED);
+    let timestamp = luxon.DateTime.fromISO("<%= entry.date %>").setLocale('<%= meta.locale %>').toLocaleString(luxon.DateTime.DATETIME_MED);
     document.getElementById("timestamp").innerHTML = timestamp;
   </script>
 </div>

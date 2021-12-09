@@ -1,5 +1,4 @@
 const fs = require('fs');
-const path = require('path');
 
 const meta = {
   port: 7000,
@@ -12,7 +11,7 @@ const meta = {
 
 // not actually SNSes
 const loadSNS = () => {
-  const fileBuffer = fs.readFileSync(path.resolve(__dirname,`../data/sns.json`));
+  const fileBuffer = fs.readFileSync(__dirname+'/../data/sns.json');
   const sns = JSON.parse(fileBuffer);
   return sns;
 };
