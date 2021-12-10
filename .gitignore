@@ -4,3 +4,4 @@ static/icons/
 old/
 data/entries.json
 configs/secrets.js
+.env
