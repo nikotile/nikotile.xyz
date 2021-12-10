@@ -1,33 +1,42 @@
-const { meta } = require('./utils/meta');
+const { meta } = require('./utils/meta')
+  , { cacheEntries, cleanIcons } = require('./utils/entries')
+  , Mongo = require('./db/db');
 const express = require('express')
   , app = express()
   , expressLayouts = require('express-ejs-layouts')
   , bodyParser = require('body-parser')
   , compression = require('compression');
 
-// thanks Tom
-app.disable('x-powered-by');
+(async () => {
+  // connect to mongodb
+  await Mongo.connect();
 
-// view engine
-app.set('view engine', 'ejs');
-app.use(expressLayouts);
+  // thanks Tom
+  app.disable('x-powered-by');
 
-// static file-serving
-app.use(express.static('static'));
+  // view engine
+  app.set('view engine', 'ejs');
+  app.use(expressLayouts);
 
-// for blog submission
-app.use(bodyParser.urlencoded({ extended: true }));
+  // static file-serving
+  app.use(express.static('static'));
 
-// compression
-app.use(compression());
+  // for blog submission
+  app.use(bodyParser.urlencoded({ extended: true }));
 
-// for metadata etc.
-app.use(require(__dirname+'/utils/getUrl'));
-app.locals.meta = meta;
+  // compression
+  app.use(compression());
 
-app.use('/', require(__dirname+'/controllers')); // routes
-app.use('/', require(__dirname+'/controllers/gets/404')) // 404 catchall
+  // for metadata etc.
+  app.use(require(__dirname+'/utils/getUrl'));
+  app.locals.meta = meta;
 
-app.listen(meta.port, () => {
-  console.log(`http://localhost:${meta.port}`);
-});
+  app.use('/', require(__dirname+'/controllers')); // routes
+  app.use('/', require(__dirname+'/controllers/gets/404')) // 404 catchall
+
+  app.listen(meta.port, () => {
+    cacheEntries().then(console.log('Entries cached'));
+    cleanIcons().then(console.log('Icons cleaned'));
+    console.log(`http://localhost:${meta.port}`);
+  });
+})();

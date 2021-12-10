@@ -1,11 +1,11 @@
 {
   "name": "nikotile.xyz",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "The homepage of Nikotile.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ."
+    "dev": "nodemon . --ignore data/entries.json"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.1",
     "jdenticon": "^3.1.1",
-    "luxon": "^2.0.2"
+    "luxon": "^2.0.2",
+    "mongoose": "^6.1.1"
   }
 }
