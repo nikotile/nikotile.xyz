@@ -9,6 +9,6 @@ router.get('/rss', require('./gets/rss'));
 router.get('/donate', require('./gets/donate'));
 
 // POST
-router.post('/post', require('./posts/write'));
+router.post('/write', require('./posts/write'));
 
 module.exports = router;
