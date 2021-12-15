@@ -2,11 +2,11 @@ const { meta } = require('../../utils/meta')
   , { writeEntry, cleanIcons } = require('../../utils/entries');
 
 // lol
-let state = '';
-process.env.NODE_ENV === 'production' ? state = false : state = true;
+let access = '';
+process.env.WRITE === 'true' ? access = true : access = false
 
 module.exports = async (req, res) => {
-  if (state) {
+  if (access) {
     writeEntry(req.body.title, req.body.description);
     cleanIcons();
     res.redirect('/write');
