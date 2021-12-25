@@ -2,8 +2,8 @@
 
 <item>
 <title><%= entries[i].title %></title>
-<guid>https://<%= getUrl().hostname %>/blog/<%= entries[i].date.slice(0,4) %>/<%= encodeURI(entries[i].title.replace(/\s/g , '-').replace(/[&\/\\#,+()$~%.'":*!?<>{}]/g,'')).toLowerCase(); %></guid>
-<link>https://<%= getUrl().hostname %>/blog/<%= entries[i].date.slice(0,4) %>/<%= encodeURI(entries[i].title.replace(/\s/g , '-').replace(/[&\/\\#,+()$~%.'":*!?<>{}]/g,'')).toLowerCase(); %></link>
+<guid>https://<%= getUrl().hostname %>/blog/<%= encodeURI(entries[i].title.replace(/\s/g , '-').replace(/[&\/\\#,+()$~%.'":*!?<>{}]/g,'')).toLowerCase(); %></guid>
+<link>https://<%= getUrl().hostname %>/blog/<%= encodeURI(entries[i].title.replace(/\s/g , '-').replace(/[&\/\\#,+()$~%.'":*!?<>{}]/g,'')).toLowerCase(); %></link>
 <pubDate><%= entries[i].pubDate %></pubDate>
 <description><![CDATA[
   <%- entries[i].description %>
