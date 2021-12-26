@@ -6,7 +6,7 @@ const meta = {
   author: 'Nikotile',
   url: 'nikotile.xyz',
   email: 'niko@nikotile.xyz',
-  locale: 'id',
+  locale: 'en-au',
 };
 
 // not actually SNSes
