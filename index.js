@@ -29,6 +29,7 @@ const express = require('express')
 
   // for metadata etc.
   app.use(require(__dirname+'/utils/getUrl'));
+  app.use(require(__dirname+'/utils/getDate'));
   app.locals.meta = meta;
 
   app.use('/', require(__dirname+'/controllers')); // routes

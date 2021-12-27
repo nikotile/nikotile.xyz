@@ -1,17 +1,6 @@
-<script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
-
-<div class="card m-3 py-5">
-  <h1 class="fw-bolder text-center"><%= entry.title %></h1>
-  <div style="text-align:justify;" class="m-3 img-nobootstrap">
-    <%- entry.description %>
-  </div>
-  <div class="mx-3">
-    <small><%= locals.meta.author %> <a href="mailto:<%= locals.meta.email %>?subject=<%= encodeURI(entry.title) %>" class="fw-bold text-muted">(reply-to)</a></small>
-   </div>
-  <small id="timestamp" class="mx-3 text-muted">
-  </small>
-  <script>
-    let timestamp = luxon.DateTime.fromISO("<%= entry.date %>").setLocale('<%= locals.meta.locale %>').toLocaleString(luxon.DateTime.DATETIME_MED);
-    document.getElementById("timestamp").innerHTML = timestamp;
-  </script>
+<h1><%= entry.title %></h1>
+<div style="text-align:justify;">
+  <%- entry.description %>
 </div>
+<p style="margin-bottom: 0px;">by <strong><%= locals.meta.author %></strong> <a href="mailto:<%= locals.meta.email %>?subject=<%= encodeURI(entry.title) %>" >(reply-to)</a></p>
+<small><%= getDate(entry.date, 'fff') %></small>

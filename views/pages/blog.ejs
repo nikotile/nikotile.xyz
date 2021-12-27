@@ -1,19 +1,13 @@
-<script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
-
-<div class="m-3 p-2">
-  <h1 class="fw-bolder text-center">Blog Items</h1>
-  <ul class="list-group list-group-flush">
+<div>
+  <h1>Blog Items</h1>
+  <ul>
     <% for (let i = 0; i < entries.length; i++) { %>
-      <li class="list-group-item d-flex justify-content-between align-items-start">
-        <div class="ms-2 me-auto">
-        <small class="text-muted" id="timestamp<%= i %>"></small>
+      <li class="list-group-item">
+        <div>
+        <small><%= getDate(entries[i].date, 'dd LLL y') %></small>
         <a href="/blog/<%= encodeURI(entries[i].title.replace(/\s/g , '-').replace(/[&\/\\#,+()$~%.'":*!?<>{}]/g,'')).toLowerCase() %>"><%= entries[i].title %></a>
         </div>
       </li>
-  <script>
-    let timestamp<%= i %> = luxon.DateTime.fromISO("<%= entries[i].date %>").setLocale('<%= locals.meta.locale %>').toFormat('dd LLL y');
-    document.getElementById("timestamp<%= i %>").innerHTML = timestamp<%= i %> + " —";
-  </script>
     <% }; %>
   </ul>
 </div>
