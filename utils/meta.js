@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 const meta = {
   port: 7000,
   title: 'Nikotile',
@@ -9,11 +7,4 @@ const meta = {
   locale: 'en-au',
 };
 
-// not actually SNSes
-const loadSNS = () => {
-  const fileBuffer = fs.readFileSync(__dirname+'/../data/sns.json');
-  const sns = JSON.parse(fileBuffer);
-  return sns;
-};
-
-module.exports = { meta, loadSNS };
+module.exports = { meta };

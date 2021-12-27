@@ -1,26 +1,11 @@
-<div>
-  <h1>Nikotile</h1>
-  <p>Hello, Nikotile here! I like literature, media, culture, and some Lacanian psychoanalysis. You may find me rambling about those stuff there and there.</p>
-</div>
+<h1>Nikotile</h1>
+<p>Hello, Nikotile here! I like literature, media, culture, and some Lacanian psychoanalysis. You may find me rambling about those stuff there and there.</p>
+
+<%- include('../includes/sns') %>
 
 <div>
   <div>
-    <p>Something (or Some Things):</p>
-  </div>
-  <ul>
-    <% for (let i = 0; i < sns.length; i++) { %>
-    <li class="list-group-item">
-      <div>
-        <a href="<%= sns[i].link %>"><%= sns[i].title %></a> 
-      </div>
-    </li>
-    <% } %>
-  </ul>
-</div>
-
-<div>
-  <div>
-    <p>Recent updates:</p>
+    <h4>Recent updates:</h4>
   </div>
   <ul>
     <% for (let i = 0; i < 4; i++) { %>
