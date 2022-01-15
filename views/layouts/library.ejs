@@ -1,0 +1,26 @@
+<!doctype html>
+<!-- special layout for /libary -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@nikotile"/>
+    <meta property="og:url" content="<%= getUrl().url %>"/>
+    <meta property="og:site_name" content="The Library of <%= locals.meta.title %>"/>
+    <meta property="og:title" content="<%= locals.meta.title %>'s Library"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="From mine own library with volumes that I prize above my dukedom."/>
+    <meta property="og:image" content="https://<%= getUrl().hostname %>/pictures/kira-blue.png"/>
+    <title><%= locals.meta.title %></title>
+    <link rel="shortcut icon" href="../../pictures/favicon.png">
+    <link href="../../style.css" rel="stylesheet">
+  </head>
+  <body>
+    <%- include('../includes/navbar') %>
+    <div>
+      <%- body %>
+    </div>
+    <%- include('../includes/footer') %>
+  </body>
+</html>
