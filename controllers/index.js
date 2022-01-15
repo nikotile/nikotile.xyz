@@ -4,6 +4,7 @@ const router = require('express').Router();
 router.get('/', require('./gets/home'));
 router.get('/blog', require('./gets/blogs'));
 router.get('/blog/:title', require('./gets/blog'));
+router.get('/library', require('./gets/library'));
 router.get('/write', require('./gets/write'));
 router.get('/rss', require('./gets/rss'));
 router.get('/donate', require('./gets/donate'));
