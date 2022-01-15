@@ -34,6 +34,7 @@ const loadEntry = (title) => {
   const entries = JSON.parse(fileBuffer).find(entry =>
     entry.title.replace(/\s/g,'-').replace(/[&\/\\#,+()$~%.'":*!?<>{}]/g,'').toLowerCase() == title
   );
+  cacheEntries();
   return entries;
 };
 
