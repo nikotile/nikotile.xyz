@@ -8,6 +8,7 @@ router.get('/library', require('./gets/library'));
 router.get('/write', require('./gets/write'));
 router.get('/rss', require('./gets/rss'));
 router.get('/donate', require('./gets/donate'));
+router.get('/contact', require('./gets/contact'));
 
 // POST
 router.post('/write', require('./posts/write'));
