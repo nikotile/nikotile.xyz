@@ -1,0 +1,21 @@
+extends ../layouts/pages
+block content
+  h1 Library
+  p Writings, works, and other nonsense I created.
+
+  div
+    h3 wibu-rss
+    p A collection of script-generated RSS feeds from Indonesian otaku/weeb news site. See the script #[a(href='https://github.com/nikotile/wibu-rss') here].
+    ul
+      li: a(href='/library/rss/kanau.xml') kanau.xml
+      li: a(href='/library/rss/mediaformasi.xml') mediaformasi.xml
+      li: a(href='/library/rss/risamedia.xml') risamedia.xml
+    p Not really otaku, but I hope it's hopeful.
+    ul: li: a(href='/library/rss/tirto.xml') tirto.xml
+
+  div
+    h3 Writings
+    ul: li: p #[a(href='https://wibu.nikotile.xyz/onnani') Onnani] (web novel)
+
+  div
+    p More soon!

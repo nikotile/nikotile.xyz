@@ -1,0 +1,7 @@
+extends ../layouts/entry
+
+block content
+  h1 #{entry.title}
+  div(style='text-align: justify') !{entry.description}
+  p(style='margin-bottom: 0px;') by #[strong #{locals.meta.title}] #[a(href='mailto:'+locals.meta.mail+'?subject='+encodeURI(entry.title)) (reply-to)]
+  small #{entry.pubDate}

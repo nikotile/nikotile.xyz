@@ -1,0 +1,9 @@
+User-Agent: Twitterbot
+User-Agent: Googlebot
+Allow: /
+
+User-Agent: *
+Disallow: /files
+
+User-agent: *
+Disallow: /

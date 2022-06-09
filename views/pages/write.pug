@@ -1,0 +1,12 @@
+extends ../layouts/pages
+
+block content
+  div
+    h1 Write
+    div
+      form(method="POST")
+        div
+          input(name="title" placeholder="Title" maxlength="150" required)
+        div
+          textarea(name="description" placeholder="Write your post. New lines will be converted to separate paragraphs. Include img <img> tag(s) manually. Consider escaping weird characters." required)
+        input(type="submit" value="Post")

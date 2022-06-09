@@ -1,0 +1,12 @@
+extends ../layouts/pages
+
+block content
+  h1 Blog
+  div
+    ul
+      each entry in entries
+        li: div
+          small #{entry.date.substring(0, 10)}
+          |
+          |
+          a(href='/blog/' + encodeURI(entry.title.replace(/\s/g , '-').replace(/[&\/\\#,+()$~%.'":*!?<>{}]/g,'').toLowerCase())) #{entry.title}
