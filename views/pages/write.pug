@@ -2,11 +2,18 @@ extends ../layouts/pages
 
 block content
   div
-    h1 Write
+    h3 Write blog entry
     div
-      form(method="POST")
-        div
-          input(name="title" placeholder="Title" maxlength="150" required)
-        div
-          textarea(name="description" placeholder="Write your post. New lines will be converted to separate paragraphs. Include img <img> tag(s) manually. Consider escaping weird characters." required)
+      form(action="/write" method="POST")
+        div: input(name="title" placeholder="Title" maxlength="150" required)
+        div: textarea(name="description" placeholder="Write your post. New lines will be converted to separate paragraphs. Include img <img> tag(s) manually. Consider escaping weird characters." required)
+        input(type="submit" value="Post")
+  br
+  div
+    h3 Edit /now page
+    div
+      form(action="/now" method="POST")
+        div: input(name="title" value=now.title maxlength="150")
+        div: input(name="picture" placeholder="Picture link")
+        div: textarea(name="description") !{now.description}
         input(type="submit" value="Post")
