@@ -2,18 +2,8 @@ extends ../layouts/pages
 
 block content
   div
-    img(src='/pictures/kira.png' style='display: block; margin-left: auto; margin-right: auto; width: 10%;')
     p(style='text-align:center;') I will Starlight you.
     p My name is Nikotile. I'm a weeb and interested in literature, media, culture, and some Lacanian psychoanalysis.
-
-    h3 Go to
-    table
-      tr: th: a(href="/library") /library
-        td Collection of what I do.
-      tr: th: a(href="/blog") /blog
-        td Blog entries and updates.
-      tr: th: a(href="/rss") /rss
-        td RSS feed version of the blog.
 
     h3 Recent updates
     ul
@@ -24,14 +14,14 @@ block content
           |
           a(href='/blog/' + encodeURI(entry.title.replace(/\s/g , '-').replace(/[&\/\\#,+()$~%.'":*!?<>{}]/g,'').toLowerCase())) #{entry.title}
 
-    h3 Contact
+    h3 Info
     table
       tr: th email
         td: a(href="mailto:niko@nikotile.xyz")  niko@nikotile.xyz
       tr: th fedi
         td 
           a(href="https://pl.nikotile.xyz/niko")  @niko@pl.nikotile.xyz
-      tr: th public key
+      tr: th pgp key
         td: a(href="/nikotile.asc")  /nikotile.asc
 
     h3 For generous people
