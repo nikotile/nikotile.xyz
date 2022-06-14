@@ -13,19 +13,9 @@ body {
   background: linear-gradient(180deg, #2e2e28 0%, #2e2e2e 10%) no-repeat fixed;
 }
 
-.navbar {
-  display: inline-block;
-}
-
-.navbar img {
-  filter: invert(100%);
-  height: 25px;
-	margin-right: 10px;
-}
-
-div > img {
-  max-width:500px;
-  max-height:350px;
+img {
+  max-width:100%;
+  max-height:auto;
 }
 
 .no-bullet {

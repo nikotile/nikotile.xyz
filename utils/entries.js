@@ -17,7 +17,7 @@ const loadEntry = (title) => {
 };
 
 const writeEntry = (title, description) => {
-  const html = '<p>' + description.replace(/\r\n/g,'</p><p>').replace(/<p><\/p>/g,'').replace(/<p><h2>/g,'<h2>').replace(/<\/p><\/h2>/g,'<\/h2>').replace(/<p><img/g,'<div class="text-center m-3"><img').replace(/<\/img><\/p>/g,'</img></div>') + '</p>';
+  const html = '<p>' + description.replace(/\r\n/g,'</p><p>').replace(/<p><\/p>/g,'').replace(/<p><h2>/g,'<h2>').replace(/<\/p><\/h2>/g,'<\/h2>').replace(/<p><img/g,'<div><img').replace(/<\/img><\/p>/g,'</img></div>') + '</p>';
   entry = {
     title, 
     uri: encodeURI(title.replace(/\s/g , '-').replace(/[&\/\\#,+()$~%.'":*!?<>{}]/g,'').toLowerCase()),
