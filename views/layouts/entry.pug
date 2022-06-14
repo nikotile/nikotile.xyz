@@ -7,13 +7,14 @@ html(lang="en")
     meta(name="twitter:site" content="@nikotile")
     meta(property="og:url" content=getUrl().url)
     meta(property="og:site_name" content="Nikotile")
-    meta(property="og:title" content="Nikotile")
-    meta(property="og:type" content="website")
-    meta(property="og:description" content="The homepage of Nikotile.")
-    meta(property="og:image" content="https://nikotile.xyz/pictures/alticon.png")
-    title Nikotile
-    link(rel="shortcut icon" href="../../pictures/favicon.png")
-    link(rel="stylesheet" href="../../style.css")
+    meta(property="og:title" content=entry.title)
+    meta(property="og:type" content="article")
+    meta(property="og:article:published_time" content=entry.date)
+    meta(property="og:description" content=entry.description.slice(0,177) + '..')
+    meta(property="og:image" content="/pictures/alticon.png")
+    title #{entry.title}
+    link(rel="shortcut icon" href="/pictures/favicon.png")
+    link(rel="stylesheet" href="/style.css")
   body
     include ../includes/header
     block content
