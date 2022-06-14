@@ -10,12 +10,17 @@ html(lang="en")
     meta(property="og:title" content=entry.title)
     meta(property="og:type" content="article")
     meta(property="og:article:published_time" content=entry.date)
-    meta(property="og:description" content=entry.description.slice(0,177) + '..')
-    meta(property="og:image" content="/pictures/alticon.png")
+    meta(property="og:description" content=entry.description.slice(0,177) + "...")
+    if entry.description.search("<img.*?>") != -1
+      meta(property="og:image" content=getUrl().base + entry.description.match(/<img src=\".*?\.[a-z].*?\">/)[0].replace(/<img\ssrc=\"/, "").replace(/\">/, ""))
+    else 
+      meta(property="og:image" content=getUrl().base + "/pictures/alticon.png")
     title #{entry.title}
     link(rel="shortcut icon" href="/pictures/favicon.png")
     link(rel="stylesheet" href="/style.css")
   body
     include ../includes/header
     block content
+    if entry.description.search("<img.*?>")
+
     include ../includes/footer
