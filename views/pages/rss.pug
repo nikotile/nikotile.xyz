@@ -9,7 +9,7 @@ rss(version='2.0' xmlns:atom='http://www.w3.org/2005/Atom')
     for entry in entries
       item
         title #{entry.title}
-        guid #{getUrl().protocol}://#{getUrl().hostname}/#{entry.uri} 
+        guid https://#{getUrl().hostname}/#{entry.uri} 
         link #{entry.uri} 
         pubDate #{entry.pubDate}
         description <![CDATA[!{entry.description}]]>
