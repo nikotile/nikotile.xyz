@@ -4,7 +4,7 @@ module.exports = (req, res, next) => {
       protocol: req.protocol,
       hostname: req.hostname,
       path: req.path,
-      base: req.protocol + '://' + req.hostname,
+      base: 'https://' + req.hostname,
       url: req.protocol + '://' + req.hostname + req.path
     };
     return urls;
