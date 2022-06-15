@@ -12,7 +12,11 @@ html(lang="en")
     meta(property="og:article:published_time" content=entry.date)
     meta(property="og:description" content=entry.description.slice(0,177) + "...")
     if entry.description.search("<img.*?>") != -1
-      meta(property="og:image" content=getUrl().base + entry.description.match(/<img src=\".*?\.[a-z].*?\">/)[0].replace(/<img\ssrc=\"/, "").replace(/\">/, ""))
+      - var img = entry.description.match(/<img src=\".*?\.[a-z].*?\">/)[0].replace(/<img\ssrc=\"/, "").replace(/\">/, "") 
+      if img.startsWith('http')
+        meta(property="og:image" content=img)
+      else
+        meta(property="og:image" content=getUrl().base + img)
     else 
       meta(property="og:image" content=getUrl().base + "/pictures/alticon.png")
     title #{entry.title}
