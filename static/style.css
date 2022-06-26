@@ -53,6 +53,12 @@ footer {
   margin-top: 20px;
 }
 
+.buttons > a {
+  margin: auto;
+  padding: 5px;
+  display: inline-block;
+}
+
 th {
 	text-align: left;
 	padding-right: 1rem;
