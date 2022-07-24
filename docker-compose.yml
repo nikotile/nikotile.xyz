@@ -4,7 +4,10 @@ services:
     image: nikotile:latest
     container_name: nikotile
     ports:
-      - "6969:3000"
+      - "3000:3000"
     volumes:
       - "/home/niko/dev/web/nikotile.xyz/data:/src/data"
       - "/home/niko/dev/web/nikotile.xyz/static:/src/static"
+    #network_mode: bridge
+    network_mode: host
+    restart: "unless-stopped"

@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-VOLUME [/src/data /src/static]
+VOLUME ["/src/data", "/src/static"]
 
 ENV PORT=3000
 
