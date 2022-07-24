@@ -1,18 +1,17 @@
 br
 hr
-footer
-  div(class="buttons")
-    a(href="https://lapetite.moe")
-      img(src="/pictures/buttons/lapetitemoe.gif")
-    a(href="https://districts.neocities.org/tokyo/")
-      img(src="/pictures/buttons/tokyo.png")
-    a(href="https://wiby.me")
-      img(src="/pictures/buttons/wiby.gif")
-  a(href="https://nikotile.xyz/") main
-  |  - 
-  a(href="https://mirror.nikotile.xyz/") mirror
-  |  - 
-  a(href="http://wcn62ebohmmfvyyhmnwbnpjbfyrmalwzmnqjc7kdi74p3cyln36xwzid.onion/") tor
+if getUrl().path === '/'
+  footer
+    div(class="buttons")
+      a(href="https://burypink.neocities.org")
+        img(src="/pictures/buttons/burypink.png")
+      a(href="http://unicornjelly.com/index.html")
+        img(src="/pictures/buttons/unicornjelly.gif")
+      a(href="https://districts.neocities.org/tokyo")
+        img(src="/pictures/buttons/tokyo.png")
+      a(href="https://wiby.me")
+        img(src="/pictures/buttons/wiby.gif")
+    div
+      a(href="https://itazuraneko.neocities.org")
+        img(src="/pictures/buttons/hanko.png")
 
-  div: a(href="https://creativecommons.org/licenses/by-nc-sa/4.0/")
-    img(style="margin-top: 10px;" src="/pictures/cc.png")
