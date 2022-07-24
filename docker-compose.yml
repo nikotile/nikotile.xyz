@@ -1,0 +1,10 @@
+version: "3"
+services:
+  nikotile:
+    image: nikotile:latest
+    container_name: nikotile
+    ports:
+      - "6969:3000"
+    volumes:
+      - "/home/niko/dev/web/nikotile.xyz/data:/src/data"
+      - "/home/niko/dev/web/nikotile.xyz/static:/src/static"

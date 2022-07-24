@@ -1,5 +1,5 @@
 const meta = {
-  port: 3000,
+  port: process.env.PORT || 3000,
   title: 'Nikotile',
   mail: 'niko@nikotile.xyz'
 };
