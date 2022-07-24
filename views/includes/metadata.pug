@@ -1,0 +1,22 @@
+if entry.description.search("<img.*?>") != -1
+  - var img = entry.description.match(/<img src=\".*?\.[a-z].*?\">/)[0].replace(/<img\ssrc=\"/, "").replace(/\">/, "")
+  if img.startsWith('http')
+    meta(property="og:image" content=img)
+  else
+    meta(property="og:image" content=getUrl().base + img)
+else
+  meta(property="og:image" content=getUrl().base + "/pictures/kira-blue.png")
+
+if entry.description.search("<video.*?>") != -1
+  - var video = entry.description.match(/<source src=\".*?\.[a-z].*?\".*type=\"video\/[a-z].*\">/)[0].replace(/<source\ssrc=\"/, "").replace(/\"\stype=\"video\/[a-z].*\">/, "")
+  meta(name="twitter:card" content="player")
+  meta(name="twitter:player:width" content="640")
+  meta(name="twitter:player:height" content="480")
+  if video.startsWith('http')
+    meta(property="twitter:player" content=video)
+    meta(property="twitter:player:stream" content=video)
+  else
+    meta(property="twitter:player" content=getUrl().base + video)
+    meta(property="twitter:player:stream" content=getUrl().base + video)
+else
+  meta(name="twitter:card" content="summary")
